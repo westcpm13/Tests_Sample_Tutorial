@@ -10,8 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var click: UIButton!
+    var calledSegue: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "MainViewController"
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,5 +26,12 @@ class MainViewController: UIViewController {
         return .lightContent
     }
 
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        super.performSegue(withIdentifier:identifier , sender: sender)
+        
+        self.calledSegue = identifier
+        
+    }
+    
 }
 

@@ -25,5 +25,5 @@ class MovieTestCase: XCTestCase {
         XCTAssertEqual(movie.title, "God War")
         
     }
-        
+    
 }
