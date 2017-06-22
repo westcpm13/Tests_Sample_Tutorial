@@ -26,4 +26,8 @@ class MovieTestCase: XCTestCase {
         
     }
     
+    func testInitSetMovieTitleAndReleasedDate() {
+        let movie = Movie(title: "Lost World",releaseDate: "02/04/1985")
+        XCTAssertEqual(movie.releaseDate, "02/04/1985")
+    }
 }
