@@ -28,6 +28,21 @@ class MovieManagerTests: XCTestCase {
         XCTAssertEqual(sut.moviesToSeeCount, 0)
     }
     
+    func testMoviesToSeeCountHowLazyNotWorking_ShouldBeFour() {
+        
+        let movie1 = TestExample.Movie(title: "Film Pierwszy")
+        let movie2 = TestExample.Movie(title: "Film Drugi")
+        self.sut.addMovieToLibrary(movie: movie1)
+        self.sut.addMovieToLibrary(movie: movie2)
+        XCTAssertEqual(self.sut.moviesToSeeArrayHowLazy, 2)
+        
+        let movie3 = TestExample.Movie(title: "Film Trzeci")
+        let movie4 = TestExample.Movie(title: "Film Czwarty")
+        self.sut.addMovieToLibrary(movie: movie3)
+        self.sut.addMovieToLibrary(movie: movie4)
+        XCTAssertEqual(self.sut.moviesToSeeArrayHowLazy, 4)
+    }
+    
     func testMoviesToSeenCount_ReturnZero() {
         XCTAssertEqual(sut.moviesToSeenCount, 0)
     }
