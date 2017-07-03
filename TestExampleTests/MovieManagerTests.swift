@@ -32,8 +32,48 @@ class MovieManagerTests: XCTestCase {
         XCTAssertEqual(sut.moviesToSeenCount, 0)
     }
     
-    func testMoviesCounts_BothShouldReturnZero() {
-        XCTAssertEqual(sut.moviesToSeeCount, 0)
-        XCTAssertEqual(sut.moviesToSeenCount, 0)
+    func testMoviesToSeeCount_ShouldBeOneAfterMovieAdded() {
+        sut.addMovieToLibrary(movie: TestExample.Movie(title: "Hobbit"))
+        XCTAssertEqual(sut.moviesToSeeCount, 1)
     }
+    
+    func testMovieAtIndex_ReturnLastAddedMoview() {
+        let movie = TestExample.Movie(title: "Seksmisja")
+        sut.addMovieToLibrary(movie: movie)
+        let returnedMovieAtIndex = sut.movieAtIndex(index: 0)
+        XCTAssertEqual(movie.title, returnedMovieAtIndex.title)
+    }
+    
+    func testFavouriteMovies_UpdatesMoviesSeenAndMoviesToSeeCount() {
+        let movie = TestExample.Movie(title: "Oszukac przeznaczenie")
+        self.sut.addMovieToLibrary(movie: movie)
+        self.sut.favouriteMovieAtIndex(index: 0)
+        XCTAssertEqual(self.sut.moviesToSeeCount, 0)
+        XCTAssertEqual(self.sut.moviesToSeenCount, 1)
+
+    }
+    
+    func testFavouriteMovie_ShouldRemoveMovieFromMoviesToSeeArray() {
+        let movie1 = TestExample.Movie(title: "Film Pierwszy")
+        let movie2 = TestExample.Movie(title: "Film Drugi")
+        
+        self.sut.addMovieToLibrary(movie: movie1)
+        self.sut.addMovieToLibrary(movie: movie2)
+        // movie1 is at index 0
+        self.sut.favouriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(self.sut.movieAtIndex(index: 0).title, movie2.title)
+    }
+    
+    func testFavouriteMovieAtIndex_ShouldReturnFavouriteMovie() {
+        let movie = TestExample.Movie(title: "moj ulobiony film")
+        self.sut.addMovieToLibrary(movie: movie)
+        self.sut.favouriteMovieAtIndex(index: 0)
+       
+        let returnedMovie = self.sut.favouritedMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(movie.title, returnedMovie.title)
+        
+    }
+    
 }
