@@ -15,12 +15,10 @@ class MovieManagerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         self.sut = MovieManager()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -34,13 +32,13 @@ class MovieManagerTests: XCTestCase {
         let movie2 = TestExample.Movie(title: "Film Drugi")
         self.sut.addMovieToLibrary(movie: movie1)
         self.sut.addMovieToLibrary(movie: movie2)
-        XCTAssertEqual(self.sut.moviesToSeeArrayHowLazy, 2)
+        XCTAssertEqual(self.sut.moviesToSeeCountHowLazy, 2)
         
         let movie3 = TestExample.Movie(title: "Film Trzeci")
         let movie4 = TestExample.Movie(title: "Film Czwarty")
         self.sut.addMovieToLibrary(movie: movie3)
         self.sut.addMovieToLibrary(movie: movie4)
-        XCTAssertEqual(self.sut.moviesToSeeArrayHowLazy, 4)
+        XCTAssertEqual(self.sut.moviesToSeeCountHowLazy, 4)
     }
     
     func testMoviesToSeenCount_ReturnZero() {
@@ -65,18 +63,15 @@ class MovieManagerTests: XCTestCase {
         self.sut.favouriteMovieAtIndex(index: 0)
         XCTAssertEqual(self.sut.moviesToSeeCount, 0)
         XCTAssertEqual(self.sut.moviesToSeenCount, 1)
-
     }
     
     func testFavouriteMovie_ShouldRemoveMovieFromMoviesToSeeArray() {
         let movie1 = TestExample.Movie(title: "Film Pierwszy")
         let movie2 = TestExample.Movie(title: "Film Drugi")
-        
         self.sut.addMovieToLibrary(movie: movie1)
         self.sut.addMovieToLibrary(movie: movie2)
         // movie1 is at index 0
         self.sut.favouriteMovieAtIndex(index: 0)
-        
         XCTAssertEqual(self.sut.movieAtIndex(index: 0).title, movie2.title)
     }
     
@@ -84,11 +79,8 @@ class MovieManagerTests: XCTestCase {
         let movie = TestExample.Movie(title: "moj ulobiony film")
         self.sut.addMovieToLibrary(movie: movie)
         self.sut.favouriteMovieAtIndex(index: 0)
-       
         let returnedMovie = self.sut.favouritedMovieAtIndex(index: 0)
-        
         XCTAssertEqual(movie.title, returnedMovie.title)
-        
     }
     
 }

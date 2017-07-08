@@ -23,11 +23,29 @@ class MovieTestCase: XCTestCase {
     func testInitSetMovieTitle() {
         let movie = Movie(title: "God War")
         XCTAssertEqual(movie.title, "God War")
-        
     }
     
     func testInitSetMovieTitleAndReleasedDate() {
         let movie = Movie(title: "Lost World",releaseDate: "02/04/1985")
         XCTAssertEqual(movie.releaseDate, "02/04/1985")
     }
+    
+    func testMoviesAreEqual_ShouldReturnTrue() {
+        let movie1 = Movie(title: "Tomb Rider")
+        let movie2 = Movie(title: "Tomb Rider")
+        XCTAssertEqual(movie1, movie2)
+    }
+    
+    func testMoviesTitleAreDifferent_ShouldReturnNotEqual() {
+        let movie1 = Movie(title: "Tomb Rider")
+        let movie2 = Movie(title: "Seksmisja")
+        XCTAssertNotEqual(movie1, movie2)
+    }
+    
+    func testMoviesReleaseDatesAreDifferent_ShouldReturnNotEqual() {
+        let movie1 = Movie(title: "Tomb Rider", releaseDate: "02/04/1995")
+        let movie2 = Movie(title: "Tomb Rider", releaseDate: "12/06/1996")
+        XCTAssertNotEqual(movie1, movie2)
+    }
+    
 }

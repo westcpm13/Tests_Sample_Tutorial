@@ -13,7 +13,7 @@ class MovieManager {
     private var moviesToSeeArray = [Movie]()
     private var moviesSeenArray = [Movie]()
     
-    lazy var moviesToSeeArrayHowLazy: Int = {
+    lazy var moviesToSeeCountHowLazy: Int = {
         return self.moviesToSeeArray.count
     }()
     
