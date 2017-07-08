@@ -38,7 +38,7 @@ class MovieManagerTests: XCTestCase {
         let movie4 = TestExample.Movie(title: "Film Czwarty")
         self.sut.addMovieToLibrary(movie: movie3)
         self.sut.addMovieToLibrary(movie: movie4)
-        XCTAssertEqual(self.sut.moviesToSeeCountHowLazy, 4)
+        XCTAssertNotEqual(self.sut.moviesToSeeCountHowLazy, 4)
     }
     
     func testMoviesToSeenCount_ReturnZero() {
@@ -81,6 +81,23 @@ class MovieManagerTests: XCTestCase {
         self.sut.favouriteMovieAtIndex(index: 0)
         let returnedMovie = self.sut.favouritedMovieAtIndex(index: 0)
         XCTAssertEqual(movie.title, returnedMovie.title)
+    }
+    
+    func testClearArrays_ShoudReturnArraysZero() {
+        let movie1 = TestExample.Movie(title: "First movie")
+        let movie2 = TestExample.Movie(title: "Second movie")
+        self.sut.addMovieToLibrary(movie: movie1)
+        self.sut.addMovieToLibrary(movie: movie2)
+        self.sut.favouriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(self.sut.moviesToSeeCount, 1)
+        XCTAssertEqual(self.sut.moviesToSeenCount, 1)
+        
+        self.sut.clearArrays()
+        
+        XCTAssertEqual(self.sut.moviesToSeeCount, 0)
+        XCTAssertEqual(self.sut.moviesToSeenCount, 0)
+
     }
     
 }

@@ -28,7 +28,7 @@ class MainViewControllerTests: XCTestCase {
     }
     
     func testTitleMainViewController() {
-        XCTAssertEqual(self.mainViewController?.title, "MainViewController")
+        XCTAssertEqual(self.mainViewController?.title, "Main")
     }
     
     func testIfVcIsMainViewController() {

@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Library View Controller-->
         <scene sceneID="aDA-Uo-WNN">
             <objects>
-                <viewController id="7qr-Rm-TnD" sceneMemberID="viewController">
+                <viewController id="7qr-Rm-TnD" customClass="MovieLibraryViewController" customModule="TestExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j33-qg-VAZ"/>
                         <viewControllerLayoutGuide type="bottom" id="hjv-h3-UIl"/>

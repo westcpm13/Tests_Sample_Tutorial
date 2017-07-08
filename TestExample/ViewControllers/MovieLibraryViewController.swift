@@ -8,14 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MovieLibraryViewController: UIViewController {
 
-    @IBOutlet weak var click: UIButton!
-    var calledSegue: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "MainViewController"
+        self.title = "MovieLibraryViewController"
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,13 +22,6 @@ class MainViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        super.performSegue(withIdentifier:identifier , sender: sender)
-        
-        self.calledSegue = identifier
-        
-    }
-    
 }
+
 

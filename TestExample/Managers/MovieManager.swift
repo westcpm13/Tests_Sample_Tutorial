@@ -43,4 +43,9 @@ class MovieManager {
     func favouritedMovieAtIndex(index: Int) -> Movie {
         return self.moviesSeenArray[index]
     }
+    
+    func clearArrays() {
+        self.moviesSeenArray.removeAll()
+        self.moviesToSeeArray.removeAll()
+    }
 }
