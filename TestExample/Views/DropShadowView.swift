@@ -25,12 +25,6 @@ class DropShadowView: UIView {
         self.setUpShadow()
     }
     
-//    override func draw(_ rect: CGRect) {
-//        super.draw(rect)
-//        self.setUpShadow()
-//    }
-    
-    
     private func setUpShadow() {
         self.layer.shadowOffset = self.shadowOffset
         self.layer.shadowOpacity = self.shadowOpacity

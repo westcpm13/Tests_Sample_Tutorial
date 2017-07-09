@@ -11,13 +11,25 @@ import XCTest
 
 class MovieLibraryViewControllerTests: XCTestCase {
     
+    var movieLibraryVC: MovieLibraryViewController!
+    
     override func setUp() {
         super.setUp()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.movieLibraryVC = storyboard.instantiateViewController(withIdentifier: "MovieLibraryViewController") as! MovieLibraryViewController
+        _ = self.movieLibraryVC.view
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
+    func testMovieLibraryVCTitle() {
+        XCTAssertEqual(self.movieLibraryVC.title, "MovieLibraryViewController")
+    }
+    
+    func testMovieLibraryVC_TableViewShouldNotBeNil() {
+        XCTAssertNotNil(self.movieLibraryVC.movieTableView)
+    }
     
 }

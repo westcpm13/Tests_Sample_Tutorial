@@ -10,6 +10,8 @@ import UIKit
 
 class MovieLibraryViewController: UIViewController {
 
+    @IBOutlet weak var movieTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MovieLibraryViewController"
