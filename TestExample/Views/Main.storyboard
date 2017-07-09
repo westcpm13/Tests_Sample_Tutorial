@@ -110,7 +110,7 @@
                                             <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6XU-PD-Zea">
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="6XU-PD-Zea">
                                                     <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6XU-PD-Zea" id="SCI-FY-7o2">
@@ -144,10 +144,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="movieLibrarysDataService" destination="wc4-2t-CLv" id="1Lc-Nl-ViM"/>
                         <outlet property="movieTableView" destination="xyA-X2-xaU" id="d6O-zS-2Tu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQh-lG-2wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wc4-2t-CLv" customClass="MovieLibrarysDataService" customModule="TestExample" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="37.331334332833585"/>
         </scene>

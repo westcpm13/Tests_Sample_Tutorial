@@ -11,10 +11,13 @@ import UIKit
 class MovieLibraryViewController: UIViewController {
 
     @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet var movieLibrarysDataService: MovieLibrarysDataService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MovieLibraryViewController"
+        self.movieTableView.dataSource = movieLibrarysDataService
+        self.movieTableView.delegate = movieLibrarysDataService
     }
 
     override func didReceiveMemoryWarning() {

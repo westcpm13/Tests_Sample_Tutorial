@@ -18,6 +18,7 @@
 		CADCEEA81F11530E00B4C121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADCEEA41F11530E00B4C121 /* Main.storyboard */; };
 		CADCEEAB1F11543700B4C121 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADCEEAA1F11543700B4C121 /* MovieManager.swift */; };
 		CADCEEAD1F1155DF00B4C121 /* MovieLibraryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADCEEAC1F1155DF00B4C121 /* MovieLibraryViewControllerTests.swift */; };
+		CADCEEAF1F12E3B500B4C121 /* MovieLibrarysDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADCEEAE1F12E3B500B4C121 /* MovieLibrarysDataService.swift */; };
 		FD1A531C1ED5BA5200FD3670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1A531B1ED5BA5200FD3670 /* AppDelegate.swift */; };
 		FD1A53231ED5BA5200FD3670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1A53221ED5BA5200FD3670 /* Assets.xcassets */; };
 		FD1A53261ED5BA5200FD3670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD1A53241ED5BA5200FD3670 /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		CADCEEA41F11530E00B4C121 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CADCEEAA1F11543700B4C121 /* MovieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		CADCEEAC1F1155DF00B4C121 /* MovieLibraryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLibraryViewControllerTests.swift; sourceTree = "<group>"; };
+		CADCEEAE1F12E3B500B4C121 /* MovieLibrarysDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLibrarysDataService.swift; sourceTree = "<group>"; };
 		FD1A53181ED5BA5200FD3670 /* TestExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1A531B1ED5BA5200FD3670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD1A53221ED5BA5200FD3670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				CADCEEA01F11530E00B4C121 /* MainViewController.swift */,
 				CADCEEA11F11530E00B4C121 /* MovieLibraryViewController.swift */,
+				CADCEEAE1F12E3B500B4C121 /* MovieLibrarysDataService.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				CADCEEA61F11530E00B4C121 /* MovieLibraryViewController.swift in Sources */,
 				CA276E0B1EE622C7008AE067 /* Movie.swift in Sources */,
 				CADCEEA71F11530E00B4C121 /* DropShadowView.swift in Sources */,
+				CADCEEAF1F12E3B500B4C121 /* MovieLibrarysDataService.swift in Sources */,
 				FD1A531C1ED5BA5200FD3670 /* AppDelegate.swift in Sources */,
 				CADCEEAB1F11543700B4C121 /* MovieManager.swift in Sources */,
 				CADCEEA51F11530E00B4C121 /* MainViewController.swift in Sources */,
