@@ -1,5 +1,5 @@
 //
-//  MovieLibrarysDataService.swift
+//  MovieLibraryDataService.swift
 //  TestExample
 //
 //  Created by Pawel Trojan on 10.07.2017.
@@ -9,14 +9,22 @@
 import UIKit
 
 class MovieLibraryDataService: NSObject {
-    
+    var movieManager: MovieManager?
 }
 
 //MARK: UITableViewDataSource
 extension MovieLibraryDataService: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        guard let movieManager = self.movieManager else {
+            return 0
+        }
+        
+        return movieManager.moviesToSeeCount
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

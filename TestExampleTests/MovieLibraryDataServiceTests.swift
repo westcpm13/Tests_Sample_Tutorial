@@ -11,24 +11,34 @@ import XCTest
 
 class MovieLibraryDataServiceTests: XCTestCase {
     
+    var movieLibraryDataService: MovieLibraryDataService!
+    var tableView: UITableView!
+    
     override func setUp() {
         super.setUp()
+        self.movieLibraryDataService = MovieLibraryDataService()
+        self.movieLibraryDataService.movieManager = MovieManager()
+        self.tableView = UITableView()
+        tableView.dataSource = self.movieLibraryDataService
+        tableView.delegate = self.movieLibraryDataService
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTableViewSectionCount_ShouldBeTwo() {
+        let numberOfSection = tableView.numberOfSections
+        XCTAssertEqual(numberOfSection, 2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testRowCountInSectionOne_ShouldBeEqualMoviesToSeeCount() {
+        self.movieLibraryDataService.movieManager?.addMovieToLibrary(movie: TestExample.Movie(title: "Movie1"))
+        XCTAssertEqual(self.tableView.numberOfRows(inSection: 0), 1)
+        
+        self.movieLibraryDataService.movieManager?.addMovieToLibrary(movie: TestExample.Movie(title: "Movie2"))
+        self.tableView.reloadData()
+        
+        XCTAssertEqual(self.tableView.numberOfRows(inSection: 0), 2)
     }
-    
 }

@@ -144,7 +144,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="movieLibrarysDataService" destination="wc4-2t-CLv" id="JgT-sf-uXa"/>
+                        <outlet property="movieLibraryDataService" destination="wc4-2t-CLv" id="SB5-qu-0m9"/>
                         <outlet property="movieTableView" destination="xyA-X2-xaU" id="d6O-zS-2Tu"/>
                     </connections>
                 </viewController>
