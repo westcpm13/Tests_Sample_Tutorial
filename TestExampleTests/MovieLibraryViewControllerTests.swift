@@ -34,13 +34,13 @@ class MovieLibraryViewControllerTests: XCTestCase {
     
     func testViewDidLoad_SetsTableViewDataSource() {
         XCTAssertNotNil(self.movieLibraryVC.movieTableView.dataSource)
-        XCTAssertTrue(self.movieLibraryVC.movieTableView.dataSource is MovieLibrarysDataService)
+        XCTAssertTrue(self.movieLibraryVC.movieTableView.dataSource is MovieLibraryDataService)
     }
     
     func testViewDidLoad_SetsTableViewDelegate() {
         XCTAssertNotNil(self.movieLibraryVC
         .movieTableView.delegate)
-        XCTAssertTrue(self.movieLibraryVC.movieTableView.delegate is MovieLibrarysDataService)
+        XCTAssertTrue(self.movieLibraryVC.movieTableView.delegate is MovieLibraryDataService)
     }
     
 }

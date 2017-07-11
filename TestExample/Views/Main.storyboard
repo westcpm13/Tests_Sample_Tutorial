@@ -144,12 +144,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="movieLibrarysDataService" destination="wc4-2t-CLv" id="1Lc-Nl-ViM"/>
+                        <outlet property="movieLibrarysDataService" destination="wc4-2t-CLv" id="JgT-sf-uXa"/>
                         <outlet property="movieTableView" destination="xyA-X2-xaU" id="d6O-zS-2Tu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQh-lG-2wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="wc4-2t-CLv" customClass="MovieLibrarysDataService" customModule="TestExample" customModuleProvider="target"/>
+                <customObject id="wc4-2t-CLv" customClass="MovieLibraryDataService" customModule="TestExample" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="37.331334332833585"/>
         </scene>

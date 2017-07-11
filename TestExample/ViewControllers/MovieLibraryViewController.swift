@@ -11,7 +11,7 @@ import UIKit
 class MovieLibraryViewController: UIViewController {
 
     @IBOutlet weak var movieTableView: UITableView!
-    @IBOutlet var movieLibrarysDataService: MovieLibrarysDataService!
+    @IBOutlet var movieLibrarysDataService: MovieLibraryDataService!
     
     override func viewDidLoad() {
         super.viewDidLoad()

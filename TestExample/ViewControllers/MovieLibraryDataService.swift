@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MovieLibrarysDataService: NSObject {
+class MovieLibraryDataService: NSObject {
     
 }
 
 //MARK: UITableViewDataSource
-extension MovieLibrarysDataService: UITableViewDataSource {
+extension MovieLibraryDataService: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
@@ -25,6 +25,6 @@ extension MovieLibrarysDataService: UITableViewDataSource {
     }
 }
 //MARK: UITableViewDelegate
-extension MovieLibrarysDataService: UITableViewDelegate {
+extension MovieLibraryDataService: UITableViewDelegate {
     
 }
