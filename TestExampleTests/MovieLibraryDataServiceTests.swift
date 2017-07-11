@@ -38,7 +38,20 @@ class MovieLibraryDataServiceTests: XCTestCase {
         
         self.movieLibraryDataService.movieManager?.addMovieToLibrary(movie: TestExample.Movie(title: "Movie2"))
         self.tableView.reloadData()
-        
         XCTAssertEqual(self.tableView.numberOfRows(inSection: 0), 2)
     }
+    
+    func testRowCountInSectionTwo_ShouldBeEqualMoviesSeenCount() {
+        self.movieLibraryDataService.movieManager?.addMovieToLibrary(movie: TestExample.Movie(title: "Movie1"))
+         self.movieLibraryDataService.movieManager?.addMovieToLibrary(movie: TestExample.Movie(title: "Movie2"))
+        self.movieLibraryDataService.movieManager?.favouriteMovieAtIndex(index: 0)
+        XCTAssertEqual(self.tableView.numberOfRows(inSection: 1), 1)
+        
+        self.movieLibraryDataService.movieManager?.favouriteMovieAtIndex(index: 0)
+        self.tableView.reloadData()
+        XCTAssertEqual(self.tableView.numberOfRows(inSection: 1), 2)
+
+
+    }
+    
 }

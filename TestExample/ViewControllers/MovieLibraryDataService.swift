@@ -19,8 +19,15 @@ extension MovieLibraryDataService: UITableViewDataSource {
         guard let movieManager = self.movieManager else {
             return 0
         }
+        switch section {
+        case 0:
+            return movieManager.moviesToSeeCount
+        case 1:
+            return movieManager.moviesToSeenCount
+        default:
+            return 0
+        }
         
-        return movieManager.moviesToSeeCount
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
