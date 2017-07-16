@@ -15,6 +15,7 @@
 		CA276E121EE75F72008AE067 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA276E111EE75F72008AE067 /* MainViewControllerTests.swift */; };
 		CA99CAB31F1B6A010058695B /* MocksExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA99CAB21F1B6A010058695B /* MocksExtensions.swift */; };
 		CA99CAB61F1BE4940058695B /* MovieCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA99CAB51F1BE4940058695B /* MovieCellTests.swift */; };
+		CA99CAB81F1BFE370058695B /* DropShadowViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA99CAB71F1BFE370058695B /* DropShadowViewTests.swift */; };
 		CAA5187A1F1AD705000E4B9F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA518791F1AD705000E4B9F /* MovieCell.swift */; };
 		CADCEEA51F11530E00B4C121 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADCEEA01F11530E00B4C121 /* MainViewController.swift */; };
 		CADCEEA61F11530E00B4C121 /* MovieLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADCEEA11F11530E00B4C121 /* MovieLibraryViewController.swift */; };
@@ -46,6 +47,7 @@
 		CA276E111EE75F72008AE067 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		CA99CAB21F1B6A010058695B /* MocksExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MocksExtensions.swift; sourceTree = "<group>"; };
 		CA99CAB51F1BE4940058695B /* MovieCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellTests.swift; sourceTree = "<group>"; };
+		CA99CAB71F1BFE370058695B /* DropShadowViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadowViewTests.swift; sourceTree = "<group>"; };
 		CAA518791F1AD705000E4B9F /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		CADCEEA01F11530E00B4C121 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CADCEEA11F11530E00B4C121 /* MovieLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLibraryViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				CA99CAB51F1BE4940058695B /* MovieCellTests.swift */,
+				CA99CAB71F1BFE370058695B /* DropShadowViewTests.swift */,
 			);
 			name = ViewsTest;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CADCEEAD1F1155DF00B4C121 /* MovieLibraryViewControllerTests.swift in Sources */,
 				CA276E081EE620CB008AE067 /* MovieTestCase.swift in Sources */,
 				CA99CAB61F1BE4940058695B /* MovieCellTests.swift in Sources */,
+				CA99CAB81F1BFE370058695B /* DropShadowViewTests.swift in Sources */,
 				CA276E0C1EE622C7008AE067 /* Movie.swift in Sources */,
 				CA99CAB31F1B6A010058695B /* MocksExtensions.swift in Sources */,
 				CA0560B21EFAEC83004679C1 /* MovieManagerTests.swift in Sources */,

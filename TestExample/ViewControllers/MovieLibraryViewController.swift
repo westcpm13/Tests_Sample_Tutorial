@@ -31,10 +31,6 @@ class MovieLibraryViewController: UIViewController {
         
         self.movieTableView.reloadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

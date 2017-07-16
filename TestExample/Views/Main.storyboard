@@ -70,6 +70,7 @@
                     <navigationItem key="navigationItem" id="kpJ-OV-RJW"/>
                     <connections>
                         <outlet property="click" destination="Dvo-qL-LxX" id="iI2-wz-NSj"/>
+                        <outlet property="dropShadowView" destination="Wlo-VP-NkK" id="7NC-i8-EEj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

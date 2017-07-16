@@ -44,4 +44,8 @@ class MovieLibraryViewControllerTests: XCTestCase {
         XCTAssertTrue(self.movieLibraryVC.movieTableView.delegate is MovieLibraryDataService)
     }
     
+    func testPreferredStatusBarStyle_ShouldSetBeToLight() {
+        XCTAssertEqual(self.movieLibraryVC.preferredStatusBarStyle, .lightContent)
+    }
+    
 }

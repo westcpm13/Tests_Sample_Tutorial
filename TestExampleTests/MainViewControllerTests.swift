@@ -20,7 +20,6 @@ class MainViewControllerTests: XCTestCase {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         self.mainViewController = storyBoard.instantiateViewController(withIdentifier: "MainViewController")
         _ = self.mainViewController?.view
-        //"goToNextController"        
     }
     
     func testIfMainViewControllerExist() {
@@ -45,6 +44,12 @@ class MainViewControllerTests: XCTestCase {
         }
         
     }
+    
+    func testPreferredStatusBarStyle_ShouldSetBeToLight() {
+        
+        XCTAssertEqual(self.mainViewController?.preferredStatusBarStyle, .lightContent)
+    }
+    
     
     override func tearDown() {
         super.tearDown()

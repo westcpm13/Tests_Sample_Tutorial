@@ -13,7 +13,8 @@ class DropShadowView: UIView {
 
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0)
     @IBInspectable var shadowOpacity: Float = 0
-    
+    var isPrepareForInterfaceBuilderExcetute = false
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class DropShadowView: UIView {
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
+        self.isPrepareForInterfaceBuilderExcetute = true
         self.setUpShadow()
     }
     

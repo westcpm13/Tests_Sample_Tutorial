@@ -9,16 +9,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    @IBOutlet weak var dropShadowView: DropShadowView!
 
     @IBOutlet weak var click: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Main"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

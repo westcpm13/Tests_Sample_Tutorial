@@ -31,7 +31,7 @@ extension MovieLibraryDataServiceTests {
     
     class MovieCellMock: MovieCell {
         var movie:  TestExample.Movie?
-        
+
         override func configureCell(withMovie: TestExample.Movie) {
             self.movie = withMovie
         }
@@ -53,5 +53,6 @@ extension MovieCellTests {
         
     }
 }
+
 
 
