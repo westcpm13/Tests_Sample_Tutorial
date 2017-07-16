@@ -26,7 +26,9 @@ class MovieManager {
     }
 
     func addMovieToLibrary(movie: Movie) {
-        self.moviesToSeeArray.append(movie)
+        if !moviesToSeeArray.contains(movie) {
+            moviesToSeeArray.append(movie)
+        }
     }
     
     func movieAtIndex(index: Int) -> Movie {
@@ -34,10 +36,10 @@ class MovieManager {
     }
     
     func favouriteMovieAtIndex(index: Int) {
-        guard self.moviesToSeeCount > index else { return }
-
-        let favouritedMovie = self.moviesToSeeArray.remove(at: index)
-        self.moviesSeenArray.append(favouritedMovie)
+        guard index < moviesToSeeCount else {return}
+        
+        let favoritedMovie = moviesToSeeArray.remove(at: index)
+        moviesSeenArray.append(favoritedMovie)
     }
     
     func favouritedMovieAtIndex(index: Int) -> Movie {
@@ -48,4 +50,5 @@ class MovieManager {
         self.moviesSeenArray.removeAll()
         self.moviesToSeeArray.removeAll()
     }
+    
 }

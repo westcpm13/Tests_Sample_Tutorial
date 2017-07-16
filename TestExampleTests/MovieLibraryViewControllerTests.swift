@@ -22,6 +22,7 @@ class MovieLibraryViewControllerTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        self.movieLibraryVC = nil
     }
     
     func testMovieLibraryVCTitle() {

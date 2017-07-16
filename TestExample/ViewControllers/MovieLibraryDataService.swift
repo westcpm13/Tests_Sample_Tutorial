@@ -12,6 +12,11 @@ class MovieLibraryDataService: NSObject {
     var movieManager: MovieManager?
 }
 
+enum LibrarySection: Int {
+    case moviesToSee
+    case moviesSeen
+}
+
 //MARK: UITableViewDataSource
 extension MovieLibraryDataService: UITableViewDataSource {
     
@@ -19,13 +24,13 @@ extension MovieLibraryDataService: UITableViewDataSource {
         guard let movieManager = self.movieManager else {
             return 0
         }
-        switch section {
-        case 0:
-            return movieManager.moviesToSeeCount
-        case 1:
-            return movieManager.moviesToSeenCount
-        default:
-            return 0
+        guard let librarySection = LibrarySection(rawValue: section) else { fatalError() }
+        
+        switch librarySection {
+            case .moviesToSee:
+                return movieManager.moviesToSeeCount
+            case .moviesSeen:
+                return movieManager.moviesToSeenCount
         }
         
     }
@@ -35,11 +40,44 @@ extension MovieLibraryDataService: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        guard let movieManager = self.movieManager else { fatalError() }
+
+        guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
         
-        return UITableViewCell()
+        let currentMovie = librarySection.rawValue == 0 ? movieManager.movieAtIndex(index: indexPath.row) : movieManager.favouritedMovieAtIndex(index: indexPath.row)
+        
+        cell.configureCell(withMovie: currentMovie)
+        
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let librarySection = LibrarySection(rawValue: section) else { fatalError() }
+        
+        var titleSection: String
+        
+        switch librarySection {
+            case .moviesToSee:
+            titleSection = "Movies To See"
+            case .moviesSeen:
+            titleSection = "Movies Seen"
+        }
+        
+        return titleSection
+    }
+    
 }
 //MARK: UITableViewDelegate
 extension MovieLibraryDataService: UITableViewDelegate {
-    
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let movieManager = self.movieManager else { fatalError() }
+        guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
+        
+        if librarySection == .moviesToSee {
+            movieManager.favouriteMovieAtIndex(index: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }
